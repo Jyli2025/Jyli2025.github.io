@@ -5,5 +5,5 @@
 你好呀
 
 ---
-[百度](www.baidu.com)
+[百度](https://www.baidu.com)
 写什么好
