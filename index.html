@@ -3,86 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jianyu Li|Homepage</title>
+    <title>Jianyu Li | Personal Homepage</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             color: #333;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
         .header {
+            background: linear-gradient(120deg, #2c3e50, #3498db);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 20px;
         }
         .avatar {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
         }
         h1 {
-            margin: 10px 0;
-            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            font-weight: 600;
         }
-        .bio {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-item i {
+            font-size: 1.2rem;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
             margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title i {
+            color: #3498db;
+        }
+        .bio-text {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .research-item {
+            margin-bottom: 20px;
+        }
+        .research-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .research-desc {
+            margin-left: 20px;
+            color: #555;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 15px 0;
+        }
+        .awards-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .award-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
         }
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
+            margin-top: 30px;
         }
-        .social-links a {
-            color: #3498db;
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.3s;
         }
-        .section {
-            background: white;
+        .social-link:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        .footer {
+            text-align: center;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
+            background: #2c3e50;
+            color: white;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            .header {
+                padding: 30px 15px;
+            }
+            .content {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .awards-list {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="header">
-        <img src="https://raw.githubusercontent.com/Jyli2025/Jyli2025.github.io/main/cat.jpg" alt="你的头像" class="avatar">
-        <h1>李健宇</h1>
-        <h2>Jianyu Li</h2>
-        <p>中国科学院大学 | 化学研究所</p>
-        <p>Institute of Chemistry, Chinese Academy of Sciences</p>
-        <p>地址：北京市海淀区中关村北一街2号</p>
-        <p>Address:Zhongguancun North First Street 2,100190 Beijing, PR China</p>
-    </div>
-
-    <div class="bio section">
-        <h2>👋 Who am I？</h2>
-        <p>这里写一段自我介绍，可以包括：<br>
-        - 你的职业/专业<br>
-        - 兴趣爱好<br>
-        - 技能特长<br>
-        - 其他你想分享的内容...</p>
-    </div>
-
-    <div class="section">
-        <h2>📬 Contact Me！</h2>
-        <div class="social-links">
-            <!-- 替换为你的实际链接 -->
-            <a href="mailto:lijianyu2014@ncepu.edu.cn">Personal Mail(University)</a>
-            <a href="https://twitter.com/你的账号" target="_blank">Twitter</a>
-            <a href="https://github.com/你的账号" target="_blank">GitHub</a>
+    <div class="container">
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/Jyli2025/Jyli2025.github.io/main/cat.jpg" alt="Jianyu Li" class="avatar">
+            <h1>李健宇</h1>
+            <h2>Jianyu Li</h2>
+            <p>中国科学院大学 | 化学研究所</p>
+            <p>Institute of Chemistry, Chinese Academy of Sciences</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>北京市海淀区中关村北一街2号</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>lijianyu2014@ncepu.edu.cn</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-user"></i> Biography</h2>
+                <p class="bio-text">
+                    I am a final-year undergraduate student majoring in New Energy Materials and Devices in the School of New Energy, North China Electric Power University (NCEPU), with a GPA ranking of 2/28. I have been admitted to the Institute of Chemistry, Chinese Academy of Sciences (ICCAS) for a combined Master-Ph.D. program, starting in September 2026.
+                </p>
+                <p class="bio-text">
+                    I will join the research group of Academician Li Yongfang, under the supervision of Prof. Meng Lei, whose mentorship lineage traces back to Prof. Yang Yang from UCLA.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-flask"></i> Research Interests</h2>
+                <div class="research-item">
+                    <div class="research-title">Undergraduate Research (Since Aug. 2023, Prof. Li Meicheng's Group):</div>
+                    <div class="research-desc">Chiral perovskite metamaterials.</div>
+                </div>
+                <div class="research-item">
+                    <div class="research-title">Future Graduate Research:</div>
+                    <div class="research-desc">Organic photovoltaic materials and devices, perovskite solar cells.</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Research Experience</h2>
+                <ul>
+                    <li>Served as the <strong>Principal Investigator</strong> for a provincial-level "College Student Innovation and Entrepreneurship Training Program" project: Structural Design of Chiral Metamaterials and the Mechanism of Optical Activity Modulation.</li>
+                    <li>Contributed to the "Three Gorges Group Cooperation Project" and the State Grid Suzhou Power Supply Bureau project: Research on Key Technologies for Ultra-Short-Term Distributed Photovoltaic Power Generation Forecasting.</li>
+                    <li>Won the <strong>National Second Prize</strong> in the 6th "CRRC Cup" National Renewable Energy Science and Technology Competition for the project: Research on an Ultra-Short-Term Photovoltaic Module Power Prediction Model.</li>
+                    <li>Participated in the preparation of <strong>three Chinese patent applications</strong> (currently filed), covering methods for predicting PV module temperature distribution, calculating power output, and preparing ternary-coupled enhanced perovskite chiral metamaterials.</li>
+                    <li>Contributed to <strong>three manuscripts</strong> currently under review.</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> Honors & Awards</h2>
+                <div class="awards-list">
+                    <div class="award-item">
+                        <strong>Expected in 2025:</strong> National Scholarship, First-Class University Scholarship
+                    </div>
+                    <div class="award-item">
+                        Second-Class University Scholarship, Science and Technology Innovation Scholarship
+                    </div>
+                    <div class="award-item">
+                        University-Level Merit Student, Outstanding League Member, Outstanding Student Cadre (twice)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="mailto:lijianyu2014@ncepu.edu.cn" class="social-link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://raw.githubusercontent.com/Jyli2025/Jyli2025.github.io/main/wechat.jpg" class="social-link" target="_blank">
+                    <i class="fab fa-weixin"></i> WeChat
+                </a>
+                <a href="https://github.com/Jyli2025" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 Jianyu Li. All Rights Reserved.</p>
         </div>
     </div>
 </body>
