@@ -79,10 +79,33 @@
             border-bottom: 2px solid #3498db;
             display: flex;
             align-items: center;
-            gap: 10px;
+            justify-content: space-between;
         }
         .section-title i {
             color: #3498db;
+        }
+        .title-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cv-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .cv-link:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .bio-text {
             line-height: 1.8;
@@ -173,6 +196,14 @@
             .awards-list {
                 grid-template-columns: 1fr;
             }
+            .section-title {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .cv-link {
+                align-self: flex-start;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -180,7 +211,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="https://jyli2025.github.io/cat.jpg" alt="Jianyu Li" class="avatar">
+            
             <h1>李健宇</h1>
             <h2>Jianyu Li</h2>
             <p>中国科学院大学 | 化学研究所</p>
@@ -200,7 +231,14 @@
         
         <div class="content">
             <div class="section">
-                <h2 class="section-title"><i class="fas fa-user"></i> Biography</h2>
+                <h2 class="section-title">
+                    <div class="title-content">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <a href="https://Jyli2025.github.io/github_CV.pdf" target="_blank" class="cv-link">
+                        <i class="fas fa-file-pdf"></i> View CV
+                    </a>
+                </h2>
                 <p class="bio-text">
                     I am a final-year undergraduate student majoring in New Energy Materials and Devices in the School of New Energy, North China Electric Power University (NCEPU), with a GPA ranking of 2/28. I have been admitted to the Institute of Chemistry, Chinese Academy of Sciences (ICCAS) for a combined Master-Ph.D. program, starting in September 2026.
                 </p>
